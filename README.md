@@ -30,6 +30,8 @@ sudo apt install ansible -y
         update_cache: yes
 ```
 
+![](img/install_docker.png)
+
 ## Uso del Módulo `docker_container`
 
 Este módulo permite crear y administrar contenedores Docker con las siguientes opciones principales:
@@ -61,6 +63,7 @@ Este módulo permite crear y administrar contenedores Docker con las siguientes 
         ports:
           - "80:80"
 ```
+![](img/contenedor_nginx.png)
 
 ✅ Este playbook despliega un servidor Nginx en un contenedor y expone el puerto 80.
 
@@ -84,6 +87,7 @@ Este módulo permite crear y administrar contenedores Docker con las siguientes 
           MYSQL_USER: "usuario"
           MYSQL_PASSWORD: "password"
 ```
+![](img/contenedor_mysql.png)
 
 🔹 Este playbook crea un contenedor MySQL y configura credenciales seguras.
 
@@ -100,6 +104,7 @@ Este módulo permite crear y administrar contenedores Docker con las siguientes 
         name: nginx_container
         state: absent
 ```
+![](img/eliminar_contenedores.png)
 
 ✅ Este playbook elimina el contenedor `nginx_container` si existe.
 
